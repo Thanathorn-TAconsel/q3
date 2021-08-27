@@ -15,17 +15,17 @@ public class Main {
     JTextField in3 = new JTextField("3");
     JButton bn1 = new JButton("Start");
     Main() {
-        window.setBounds(100,100,400,200);
+        window.setBounds(100,100,350,220);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.setLayout(null);
-        l1.setBounds(10,10,200,25);
-        l2.setBounds(10,40,200,25);
-        l3.setBounds(10,70,200,25);
-        in1.setBounds(190,10,200,25);
-        in2.setBounds(190,40,200,25);
-        in3.setBounds(190,70,200,25);
-        bn1.setBounds(240,110,150,30);
+        l1.setBounds(10,10,150,30);
+        l2.setBounds(10,50,150,30);
+        l3.setBounds(10,90,150,30);
+        in1.setBounds(190,10,150,30);
+        in2.setBounds(190,50,150,30);
+        in3.setBounds(190,90,150,30);
+        bn1.setBounds(240,130,100,30);
         window.add(l1);
         window.add(l2);
         window.add(l3);
@@ -50,7 +50,8 @@ public class Main {
         });
        
     }
-    public static void main(String args[]) {
+    public static void main(String args[]) throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         new Main();
     }
 }
